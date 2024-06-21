@@ -11,57 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
   border: none;
-  width: 100%;
   cursor: pointer;
+  padding: 10px;
+  width: 100%;
 }
 
-h1{
+.favButton:hover {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+
+h1 {
   text-align: center;
 }
 
-nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+nav {
+  background-color: rgba(211, 211, 211);
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-a{
+nav, nav div {
+  display: flex;
+}
+
+nav button {
+  background-color: #000;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 37px;
+  width: 37px;
+}
+
+nav div {
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 55px;
+  width: 30%;
+}
+
+nav h2 {
+  margin-left: 99px;
+}
+
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
 } 
 
 footer {
+  background-color: rgba(139, 94, 92);
   display: flex;
   justify-content: center;
-  text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
-  margin-top: 2rem;
+  width: 100%;
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -70,7 +94,7 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -80,11 +104,11 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -95,12 +119,11 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
 td, th {
@@ -113,10 +136,20 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
+
 .dark > a {
   color: white;
+}
+
+.darkNav, .darkNav h4 {
+  background-color: #332f2c;
+  color: white;
+}
+
+.darkNavButton {
+  background-color: white;
 }
