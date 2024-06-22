@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from '../components/Card'
+import Card from '../Components/Card'
 import { useContextGlobal } from '../context/global.context'
-import Button from '../components/Button'
+import Button from '../Components/Button'
 
 const Home = () => {
   const {state, dispatch} = useContextGlobal();
