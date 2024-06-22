@@ -26,7 +26,7 @@ const reducer = (state, action) => {
 }
 
 const initialState = {
-  darkMode: false,
+  darkMode: localStorage.getItem("darkMode") || false,
   data: [],
   dentist: {},
   favs: JSON.parse(localStorage.getItem("favs")) || []
@@ -34,6 +34,10 @@ const initialState = {
 
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", state.darkMode)
+  }, [state.darkMode]);
   
   useEffect(() => {
     axios("https://jsonplaceholder.typicode.com/users")
